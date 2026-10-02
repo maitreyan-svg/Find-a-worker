@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { ASSETS } from '../data/mockData';
+import { HelpinLogo } from './HelpinLogo';
 
 export const ProfileScreen: React.FC = () => {
   const {
@@ -52,13 +53,17 @@ export const ProfileScreen: React.FC = () => {
         </button>
       </div>
 
-      {/* ProNear Plus Membership Card */}
+      {/* Helpin Plus Membership Card */}
       {userMode === 'client' && (
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-primary-container to-secondary p-4 text-on-primary shadow-md">
+          {/* Subtle Blended Logo Watermark */}
+          <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-48 h-28 opacity-15 pointer-events-none select-none mix-blend-overlay rotate-[-8deg]">
+            <HelpinLogo variant="watermark" />
+          </div>
           <div className="relative z-10 space-y-1.5">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full backdrop-blur-md">
-                ProNear Plus Protection
+                Helpin Plus Protection
               </span>
               <span className="text-xs font-bold text-secondary-fixed">ACTIVE</span>
             </div>
@@ -161,15 +166,15 @@ export const ProfileScreen: React.FC = () => {
       {/* Support & Hotline */}
       <div className="p-4 rounded-2xl bg-surface-container flex items-center justify-between">
         <div>
-          <h4 className="text-xs font-bold text-on-surface">ProNear Safety Support</h4>
+          <h4 className="text-xs font-bold text-on-surface">Helpin Safety Support</h4>
           <p className="text-[11px] text-on-surface-variant">24/7 dedicated dispatch resolution</p>
         </div>
         <a
-          href="tel:1800-776-6327"
+          href="tel:1800-435-746"
           className="px-3.5 py-2 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center gap-1.5 active:scale-95"
         >
           <span className="material-symbols-outlined text-[16px]">call</span>
-          1800-PRO-NEAR
+          1800-HELP-IN
         </a>
       </div>
     </div>

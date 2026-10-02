@@ -548,7 +548,7 @@ export const PartnerDashboardScreen: React.FC = () => {
           {/* Action 3: Verification Badge */}
           <button
             className="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-3 text-left hover:bg-surface-container-low transition-colors border border-surface-container-high active:scale-95"
-            onClick={() => showToast('Aadhaar & Electrical Master License verified by ProNear Compliance')}
+            onClick={() => showToast('Aadhaar & Electrical Master License verified by Helpin Compliance')}
             type="button"
           >
             <div className="w-10 h-10 rounded-xl bg-secondary-container/40 flex items-center justify-center flex-shrink-0 text-secondary">
@@ -590,7 +590,7 @@ export const PartnerDashboardScreen: React.FC = () => {
       <div className="py-space-xs text-center flex items-center justify-center gap-1 text-outline">
         <span className="material-symbols-outlined text-[14px]">shield</span>
         <span className="text-[11px]">
-          ProNear Partner Protection Plan Active • Covered up to ₹1,00,000
+          Helpin Partner Protection Plan Active • Covered up to ₹1,00,000
         </span>
       </div>
 

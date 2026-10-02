@@ -19,12 +19,21 @@ import { LocationSelectorModal } from './components/LocationSelectorModal';
 import { AddNewAddressModal } from './components/AddNewAddressModal';
 import { NotificationDrawer } from './components/NotificationDrawer';
 import { Toast } from './components/Toast';
+import { HelpinLogo } from './components/HelpinLogo';
 
 const MainLayout: React.FC = () => {
   const { userMode, activeTab, isCheckoutOpen } = useApp();
 
   return (
-    <div className="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-fixed">
+    <div className="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-fixed relative overflow-x-hidden">
+      {/* Ambient Background Blended Logo Watermarks */}
+      <div className="fixed top-28 -right-16 w-96 h-60 opacity-[0.035] pointer-events-none select-none -rotate-12 z-0 overflow-hidden">
+        <HelpinLogo variant="watermark" />
+      </div>
+      <div className="fixed bottom-32 -left-20 w-80 h-52 opacity-[0.025] pointer-events-none select-none rotate-6 z-0 overflow-hidden">
+        <HelpinLogo variant="watermark" />
+      </div>
+
       {/* Top Header */}
       <Header />
 

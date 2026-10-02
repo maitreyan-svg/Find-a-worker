@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { ASSETS } from '../data/mockData';
+import { HelpinLogo } from './HelpinLogo';
 
 export const Header: React.FC = () => {
   const {
@@ -18,24 +19,18 @@ export const Header: React.FC = () => {
       <div className="h-20 px-margin flex items-center justify-between gap-space-sm max-w-4xl mx-auto">
         {/* Brand mark & Location */}
         <div className="flex items-center gap-space-sm min-w-0">
-          <img
-            alt="ProNear Brand Mark"
-            className="h-8 w-auto object-contain flex-shrink-0 cursor-pointer"
-            src={ASSETS.logo}
+          <button
             onClick={() => setActiveTab('home')}
-          />
+            className="flex items-center gap-1.5 cursor-pointer flex-shrink-0 focus:outline-none hover:opacity-90 transition-opacity"
+            type="button"
+            aria-label="helpin Home"
+          >
+            <HelpinLogo size="md" className="h-8" />
+            <span className="text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container tracking-wider">
+              PRO
+            </span>
+          </button>
           <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-1">
-              <span
-                onClick={() => setActiveTab('home')}
-                className="font-bold text-lg text-on-surface tracking-tight leading-none cursor-pointer"
-              >
-                ProNear
-              </span>
-              <span className="text-[11px] font-bold uppercase px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
-                PRO
-              </span>
-            </div>
             <button
               onClick={() => setIsLocationModalOpen(true)}
               className="flex items-center gap-0.5 text-left text-on-surface-variant hover:text-primary transition-colors min-h-[20px]"

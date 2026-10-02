@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { ASSETS } from '../data/mockData';
 import { Booking } from '../types';
+import { HelpinLogo } from './HelpinLogo';
 
 export const BookingCheckoutModal: React.FC = () => {
   const {
@@ -128,11 +129,7 @@ export const BookingCheckoutModal: React.FC = () => {
             >
               <span className="material-symbols-outlined text-[24px]">arrow_back</span>
             </button>
-            <img
-              alt="ProNear Brand Mark"
-              className="h-7 w-auto object-contain flex-shrink-0"
-              src={ASSETS.logo}
-            />
+            <HelpinLogo size="sm" className="h-7" />
             <h1 className="text-base font-semibold text-on-surface truncate">Booking Checkout</h1>
           </div>
           <div className="flex items-center gap-space-xs">
@@ -579,7 +576,7 @@ export const BookingCheckoutModal: React.FC = () => {
                   verified_user
                 </span>
                 <p className="text-[11px] text-on-surface-variant leading-tight">
-                  ProNear 30-Day Happiness Guarantee covers all parts & service faults.
+                  Helpin 30-Day Happiness Guarantee covers all parts & service faults.
                 </p>
               </div>
             </div>

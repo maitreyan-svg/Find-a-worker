@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { CATEGORIES, POPULAR_SERVICES, PROFESSIONALS, OTHER_VERIFIED_PROS } from '../data/mockData';
 import { Professional } from '../types';
+import { HelpinLogo } from './HelpinLogo';
 
 export const HomeScreen: React.FC = () => {
   const {
@@ -161,7 +162,10 @@ export const HomeScreen: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Ambient Glow Decor */}
+          {/* Ambient Glow & Blended Transparent Logo in Background */}
+          <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-72 h-44 opacity-25 pointer-events-none select-none mix-blend-overlay rotate-[-6deg]">
+            <HelpinLogo variant="watermark" />
+          </div>
           <div className="absolute -right-8 -bottom-10 w-44 h-44 rounded-full bg-secondary-fixed/20 blur-2xl pointer-events-none"></div>
         </div>
       </section>
@@ -362,10 +366,10 @@ export const HomeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* How ProNear Works: 4-Step Stepper */}
+      {/* How Helpin Works: 4-Step Stepper */}
       <section className="px-margin space-y-3">
         <div className="flex flex-col">
-          <h3 className="text-xl text-on-surface font-bold">How ProNear Works</h3>
+          <h3 className="text-xl text-on-surface font-bold">How Helpin Works</h3>
           <p className="text-xs text-on-surface-variant">Simple, safe, and zero hidden surprises</p>
         </div>
         <div className="p-4 rounded-2xl bg-surface-container-low shadow-sm space-y-4">
@@ -542,7 +546,7 @@ export const HomeScreen: React.FC = () => {
               <span className="material-symbols-outlined text-[22px]">support_agent</span>
             </div>
             <div>
-              <h5 className="text-sm font-bold text-on-surface">ProNear Happiness Guarantee</h5>
+              <h5 className="text-sm font-bold text-on-surface">Helpin Happiness Guarantee</h5>
               <p className="text-xs text-on-surface-variant">Free re-work if you're not 100% satisfied</p>
             </div>
           </div>
@@ -553,10 +557,10 @@ export const HomeScreen: React.FC = () => {
             </div>
             <a
               className="text-xs text-primary font-bold flex items-center gap-1 hover:underline"
-              href="tel:1800-776-6327"
+              href="tel:1800-435-746"
             >
               <span className="material-symbols-outlined text-[15px]">call</span>
-              1800-PRO-NEAR
+              1800-HELP-IN
             </a>
           </div>
         </div>
